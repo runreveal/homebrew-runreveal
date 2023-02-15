@@ -7,6 +7,7 @@ class Notasahi < Formula
   head "https://github.com/FiloSottile/age.git", branch: "main"
 
   bottle do
+    root_url "https://github.com/RunReveal/homebrew-runreveal/releases/download/notasahi-1.1.1"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "e8c3818aeeb7eea70eb6b5bc3ea0cce27362a859b198fb74a00db98c6580785b"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "ac5bba583073cc0b27cfc6d4429ba0f35b0f19713db12c053fefd81f37596024"
     sha256 cellar: :any_skip_relocation, arm64_big_sur:  "54ea15cf68dcc78e96564825785b348d4f84c76042742b1ddf3cb3db2eb3c0fc"
