@@ -1,4 +1,4 @@
-class Warp < Formula
+class Runreveal < Formula
   desc 'RunReveal CLI'
   homepage 'https://runreveal.com'
   url 'https://github.com/runreveal/homebrew-runreveal/releases/download/notasahi-1.1.1/runreveal-v0.1.3-darwin-arm64.tar.gz'
