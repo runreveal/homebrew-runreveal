@@ -5,6 +5,8 @@ class Runreveal < Formula
   sha256 '7d0f295c366a95b3cee7e83bfb4be199189ae5ae63b0bc951a3e004cc94776c5'
   version '0.1.3'
   def install
+    # TODO: install script which chooses the right binary to download then
+    # links them with bin.install
     bin.install 'runreveal'
   end
 end
