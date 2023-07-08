@@ -5,13 +5,13 @@
 class Runreveal < Formula
   desc "RunReveal is your simple security data platform."
   homepage "https://runreveal.com"
-  version "0.4.0"
+  version "0.5.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.4.0/runreveal-darwin-arm64.tar.gz"
-      sha256 "2f2471f4b3a9d3bb6d2eb01262150f24d43d5fe0990545ead04bfb596fa5caa3"
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.5.0/runreveal-darwin-arm64.tar.gz"
+      sha256 "6e9bce16ab9dea5692aaffcde3b7ec6514a24fcf092cca5cea4be0ab6dc79ebf"
 
       def install
         bin.install "runreveal"
@@ -24,8 +24,8 @@ class Runreveal < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.4.0/runreveal-darwin-amd64.tar.gz"
-      sha256 "6335fff03a9e7b1bb871ae3cdb7d4cc08d90f3cb7f55a79c2e9c53a7b20b0ff1"
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.5.0/runreveal-darwin-amd64.tar.gz"
+      sha256 "677d50a69de7a02f0587e79a16c7b47533cf9cb1ebc356235de16997a1b6983a"
 
       def install
         bin.install "runreveal"
@@ -41,8 +41,8 @@ class Runreveal < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.4.0/runreveal-linux-arm64.tar.gz"
-      sha256 "f2a712b9db2fd555c1e8d6203d41f13108dc7fb328dc009e8d6f9f54073cd584"
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.5.0/runreveal-linux-arm64.tar.gz"
+      sha256 "5369bb2e99a3b9bffbee3133656762f419ec25d025c0cbc2abe370796858d34b"
 
       def install
         bin.install "runreveal"
@@ -55,8 +55,8 @@ class Runreveal < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.4.0/runreveal-linux-amd64.tar.gz"
-      sha256 "d143d87fe65d0f641935b99cfe8f1179fcc1a05a10d45c71faa7a18329d15554"
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.5.0/runreveal-linux-amd64.tar.gz"
+      sha256 "5f52467ec88da5b7de4780fecdc98b063966a08a1737b00f0a2738665e9ff287"
 
       def install
         bin.install "runreveal"
