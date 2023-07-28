@@ -5,13 +5,13 @@
 class Runreveal < Formula
   desc "RunReveal is your simple security data platform."
   homepage "https://runreveal.com"
-  version "0.6.8"
+  version "0.6.9"
   license "Proprietary"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.8/runreveal-darwin-arm64.tar.gz"
-      sha256 "1dbcd7c030cef5673496267a10b43480b65065441a89d3f71183e8a4b6f10de5"
+    if Hardware::CPU.intel?
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.9/runreveal-darwin-amd64.tar.gz"
+      sha256 "1daa3f49519743a9c00c0af19c87b83298c652d5d3e7bb69c707ba0d0dd2a0ae"
 
       def install
         bin.install "runreveal"
@@ -23,9 +23,9 @@ class Runreveal < Formula
         (fish_completion/"runreveal.fish").write `#{bin}/runreveal completion fish`
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.8/runreveal-darwin-amd64.tar.gz"
-      sha256 "e3f4d590300657ada9ba2d9839a2ea14a264a71fc8f98347fe7270bcf681382e"
+    if Hardware::CPU.arm?
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.9/runreveal-darwin-arm64.tar.gz"
+      sha256 "81fac5d240436a78585b8d0c1162b2881a331111a4bf02512ca90032dbe0a338"
 
       def install
         bin.install "runreveal"
@@ -40,9 +40,9 @@ class Runreveal < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.8/runreveal-linux-arm64.tar.gz"
-      sha256 "4efb93209d3b43d3d0007af5827de2c7377b20c21f3762a5149c0579caccd0ee"
+    if Hardware::CPU.intel?
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.9/runreveal-linux-amd64.tar.gz"
+      sha256 "f52dc589ed34d00c007639388c37870fbcec201a37c41a975e917cddc8b697a5"
 
       def install
         bin.install "runreveal"
@@ -54,9 +54,9 @@ class Runreveal < Formula
         (fish_completion/"runreveal.fish").write `#{bin}/runreveal completion fish`
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.8/runreveal-linux-amd64.tar.gz"
-      sha256 "863fda1800df054e2da5d6c73b65674f17f9c06aff8aa984643435ab6192e735"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v0.6.9/runreveal-linux-arm64.tar.gz"
+      sha256 "f07fc91dd1d9bf0c5ca41225eb9b13193c296796f46034c604d6ea24c3536bf4"
 
       def install
         bin.install "runreveal"
