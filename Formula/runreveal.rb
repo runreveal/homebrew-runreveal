@@ -5,13 +5,13 @@
 class Runreveal < Formula
   desc "RunReveal is your simple security data platform."
   homepage "https://runreveal.com"
-  version "2025.4.29"
+  version "2025.5.1"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.4.29/runreveal-darwin-amd64.tar.gz"
-      sha256 "901b0c09cdc6190aedcd300d8d794190bd2b7cfc51ef2bca8d9199ae4e0245a9"
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.5.1/runreveal-darwin-amd64.tar.gz"
+      sha256 "ab327bff07c4ab0647bd348b4ff45f8642944fa732ffa415aa73bbc0ff3f342c"
 
       def install
         bin.install "runreveal"
@@ -24,8 +24,8 @@ class Runreveal < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.4.29/runreveal-darwin-arm64.tar.gz"
-      sha256 "9a0e899b91ab8c043ff7cc80e6bf78c68af19154ba6b5aabd45c73b641682557"
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.5.1/runreveal-darwin-arm64.tar.gz"
+      sha256 "396761800409f5370cdae772a981682bca4265c62fb22206b9511eb816ef94c0"
 
       def install
         bin.install "runreveal"
@@ -40,36 +40,30 @@ class Runreveal < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.4.29/runreveal-linux-amd64.tar.gz"
-        sha256 "b58655e1913bae0997a731e5d37d51198a56f2e73a8a4b4e031e8a025e05be5a"
-
-        def install
-          bin.install "runreveal"
-          ohai "✨ The runreveal client supports auto-completions!"
-          ohai "To enable auto-completions for your prefered shell, please read the following:"
-          ohai "https://github.com/Homebrew/brew/blob/master/docs/Shell-Completion.md"
-          (bash_completion/"runreveal").write `#{bin}/runreveal completion bash`
-          (zsh_completion/"_runreveal").write `#{bin}/runreveal completion zsh`
-          (fish_completion/"runreveal.fish").write `#{bin}/runreveal completion fish`
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.5.1/runreveal-linux-amd64.tar.gz"
+      sha256 "d3dc26f970a90e4700b43121ab9a9ec953d1b59f830d6f2497907ffea468bb83"
+      def install
+        bin.install "runreveal"
+        ohai "✨ The runreveal client supports auto-completions!"
+        ohai "To enable auto-completions for your prefered shell, please read the following:"
+        ohai "https://github.com/Homebrew/brew/blob/master/docs/Shell-Completion.md"
+        (bash_completion/"runreveal").write `#{bin}/runreveal completion bash`
+        (zsh_completion/"_runreveal").write `#{bin}/runreveal completion zsh`
+        (fish_completion/"runreveal.fish").write `#{bin}/runreveal completion fish`
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.4.29/runreveal-linux-arm64.tar.gz"
-        sha256 "c04142ed8e022d3a2156a8c634156a8deed9c2cc98f7d27ee3f10a3b2ab7ac81"
-
-        def install
-          bin.install "runreveal"
-          ohai "✨ The runreveal client supports auto-completions!"
-          ohai "To enable auto-completions for your prefered shell, please read the following:"
-          ohai "https://github.com/Homebrew/brew/blob/master/docs/Shell-Completion.md"
-          (bash_completion/"runreveal").write `#{bin}/runreveal completion bash`
-          (zsh_completion/"_runreveal").write `#{bin}/runreveal completion zsh`
-          (fish_completion/"runreveal.fish").write `#{bin}/runreveal completion fish`
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/runreveal/homebrew-runreveal/releases/download/v2025.5.1/runreveal-linux-arm64.tar.gz"
+      sha256 "ba523f2efe93a52f858780c91922bf2eb9bb28123a272cd39757ab875aea3bf6"
+      def install
+        bin.install "runreveal"
+        ohai "✨ The runreveal client supports auto-completions!"
+        ohai "To enable auto-completions for your prefered shell, please read the following:"
+        ohai "https://github.com/Homebrew/brew/blob/master/docs/Shell-Completion.md"
+        (bash_completion/"runreveal").write `#{bin}/runreveal completion bash`
+        (zsh_completion/"_runreveal").write `#{bin}/runreveal completion zsh`
+        (fish_completion/"runreveal.fish").write `#{bin}/runreveal completion fish`
       end
     end
   end
