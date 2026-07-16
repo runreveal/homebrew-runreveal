@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install runreveal/runreveal/<formula>`
+`brew install runreveal/runreveal/runreveal`
 
-Or `brew tap runreveal/runreveal` and then `brew install <formula>`.
+Or `brew tap runreveal/runreveal` and then `brew install runreveal`.
 
 ## Documentation
 
